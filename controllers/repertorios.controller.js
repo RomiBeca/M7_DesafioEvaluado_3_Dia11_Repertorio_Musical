@@ -59,8 +59,8 @@ export const updateRepertorio = async (req, res) => {
         return res.json(canciones)
     } catch (error) {
         console.log(error)
-        // const { code, msg } = handleError(error)
-        // return res.status(code).json({ ok: false, msg })
+        const { code, msg } = handleError(error)
+        return res.status(code).json({ ok: false, msg })
     }
 }
 export const removeRepertorio = async (req, res) => {
